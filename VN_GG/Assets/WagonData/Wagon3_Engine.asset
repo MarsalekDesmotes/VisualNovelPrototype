@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6081c1699280e3946b79a8ca8b7bfc13, type: 3}
+  m_Name: Wagon3_Engine
+  m_EditorClassIdentifier: 
+  wagonID: wagon3_engine
+  nodes:
+  - nodeID: wagon3_engine
+    backgroundImage: {fileID: 0}
+    navigationPaths:
+    - pathDescription: "Makinistle konuş"
+      destinationNode:
+        nodeID: wagon3_engine
+        backgroundImage: {fileID: 0}
+        navigationPaths: []
+        charactersInNode: []
+      conditions: []
+    charactersInNode:
+    - character: {fileID: 11400000, guid: af2a5499b447bc54db31a1157a688327, type: 2}
+      positionOnScreen: {x: 0.5, y: 0.5}
+  startingNode:
+    nodeID: wagon3_engine
+    backgroundImage: {fileID: 0}
+    navigationPaths:
+    - pathDescription: "Makinistle konuş"
+      destinationNode:
+        nodeID: wagon3_engine
+        backgroundImage: {fileID: 0}
+        navigationPaths: []
+        charactersInNode: []
+      conditions: []
+    charactersInNode:
+    - character: {fileID: 11400000, guid: af2a5499b447bc54db31a1157a688327, type: 2}
+      positionOnScreen: {x: 0.5, y: 0.5}

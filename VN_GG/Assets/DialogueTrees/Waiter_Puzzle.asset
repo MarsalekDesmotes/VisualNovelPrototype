@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49dd0bc37c190ba459a712d70abef88b, type: 3}
+  m_Name: Waiter_Puzzle
+  m_EditorClassIdentifier: 
+  startingNode:
+    nodeID: waiter_greeting
+    speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+    dialogueText: "Hoş geldiniz! Yemek vagonuna hoş geldiniz. Ama buradan geçmek için küçük bir bulmaca çözmeniz gerekiyor. Hazır mısınız?"
+    emotion: friendly
+    choices:
+    - choiceText: "Evet, hazırım!"
+      destinationNode:
+        nodeID: waiter_puzzle
+        speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+        dialogueText: "Mükemmel! İşte bulmaca: 'Gece gündüzü, gündüz geceyi kovalar. Ama hiçbir zaman birbirlerine yetişemezler.' Bu nedir?"
+        emotion: thinking
+        choices:
+        - choiceText: "Güneş ve Ay"
+          destinationNode:
+            nodeID: waiter_correct
+            speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+            dialogueText: "Doğru! Tebrikler! Bu anahtarı alın, sonraki vagona geçebilirsiniz."
+            emotion: excited
+            choices: []
+          actions:
+          - actionType: 0
+            parameter1: puzzle_solved
+            boolValue: 1
+            intValue: 0
+        - choiceText: "Saat"
+          destinationNode:
+            nodeID: waiter_wrong
+            speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+            dialogueText: "Hayır, yanlış. Tekrar deneyin."
+            emotion: thinking
+            choices: []
+          actions: []
+        - choiceText: "Bilmiyorum..."
+          destinationNode:
+            nodeID: waiter_hint
+            speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+            dialogueText: "İpucu: Gökyüzünde gördüğümüz şeyler..."
+            emotion: friendly
+            choices: []
+          actions: []
+      actions: []
+    - choiceText: "Belki başka bir yol var mı?"
+      destinationNode:
+        nodeID: waiter_no_choice
+        speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+        dialogueText: "Maalesef yok. Bulmacayı çözmeniz gerekiyor."
+        emotion: thinking
+        choices: []
+      actions: []
+  allNodes:
+  - nodeID: waiter_greeting
+    speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+    dialogueText: "Hoş geldiniz! Yemek vagonuna hoş geldiniz. Ama buradan geçmek için küçük bir bulmaca çözmeniz gerekiyor. Hazır mısınız?"
+    emotion: friendly
+    choices:
+    - choiceText: "Evet, hazırım!"
+      destinationNode:
+        nodeID: waiter_puzzle
+        speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+        dialogueText: "Mükemmel! İşte bulmaca: 'Gece gündüzü, gündüz geceyi kovalar. Ama hiçbir zaman birbirlerine yetişemezler.' Bu nedir?"
+        emotion: thinking
+        choices:
+        - choiceText: "Güneş ve Ay"
+          destinationNode:
+            nodeID: waiter_correct
+            speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+            dialogueText: "Doğru! Tebrikler! Bu anahtarı alın, sonraki vagona geçebilirsiniz."
+            emotion: excited
+            choices: []
+          actions:
+          - actionType: 0
+            parameter1: puzzle_solved
+            boolValue: 1
+            intValue: 0
+        - choiceText: "Saat"
+          destinationNode:
+            nodeID: waiter_wrong
+            speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+            dialogueText: "Hayır, yanlış. Tekrar deneyin."
+            emotion: thinking
+            choices: []
+          actions: []
+        - choiceText: "Bilmiyorum..."
+          destinationNode:
+            nodeID: waiter_hint
+            speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+            dialogueText: "İpucu: Gökyüzünde gördüğümüz şeyler..."
+            emotion: friendly
+            choices: []
+          actions: []
+      actions: []
+    - choiceText: "Belki başka bir yol var mı?"
+      destinationNode:
+        nodeID: waiter_no_choice
+        speaker: {fileID: 11400000, guid: 345d1696ede409b4e9c9b5987dfb994c, type: 2}
+        dialogueText: "Maalesef yok. Bulmacayı çözmeniz gerekiyor."
+        emotion: thinking
+        choices: []
+      actions: []

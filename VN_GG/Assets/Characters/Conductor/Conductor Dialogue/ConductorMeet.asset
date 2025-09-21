@@ -29,11 +29,22 @@ MonoBehaviour:
   allNodes:
   - nodeID: 
     speaker: {fileID: 0}
-    dialogueText: 
+    dialogueText: selam, selam, selam, nabersin ki, nabersin ki,
     emotion: 
-    choices: []
-  - nodeID: 
-    speaker: {fileID: 0}
-    dialogueText: 
-    emotion: 
-    choices: []
+    choices:
+    - choiceText: kendini sik
+      destinationNode:
+        nodeID: conductor_meeting_response_1
+        speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+        dialogueText: "Bravo do\u011Fru Se\xE7im\t\t"
+        emotion: normal
+        choices: []
+      actions: []
+    - choiceText: kendini sikme
+      destinationNode:
+        nodeID: conductor_meeting_response_2
+        speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+        dialogueText: "Bravo do\u011Fru Se\xE7im de\u011Fil ! "
+        emotion: normal
+        choices: []
+      actions: []

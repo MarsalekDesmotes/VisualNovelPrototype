@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Conductor
   m_EditorClassIdentifier: 
   characterID: conductor
-  characterName: Conductor
+  characterName: Kondüktör Mehmet
   textBlipSound: {fileID: 0}
   entranceSound: {fileID: 0}
   themeMusic: {fileID: 0}
   mutterSound: {fileID: 0}
   expressions:
   - emotion: normal
-    sprite: {fileID: 21300000, guid: ffb75470972fc2242ab00e752a836cfc, type: 3}
-  startingDialogue: {fileID: 0}
+    sprite: {fileID: 0}
+  - emotion: suspicious
+    sprite: {fileID: 0}
+  - emotion: helpful
+    sprite: {fileID: 0}
+  startingDialogue: {fileID: 11400000, guid: 1a6acfc0c91d6654487d3dfcecd6eb9c, type: 2}

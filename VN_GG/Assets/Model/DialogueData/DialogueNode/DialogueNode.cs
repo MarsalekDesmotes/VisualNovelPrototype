@@ -13,4 +13,8 @@ public class DialogueNode
     public string emotion; // Bu konuşmada karakterin hangi ifadesini kullanacağı ("mutlu", "kızgın")
     
     public List<Choice> choices;
+    
+    // Döngüsel referansları önlemek için destinationNode'u string ID olarak tut
+    [System.NonSerialized]
+    public DialogueNode destinationNode;
 }

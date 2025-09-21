@@ -67,4 +67,45 @@ public class GameStateManager : MonoBehaviour
         }
         return 0; // Eğer daha önce bir ilişki kurulmadıysa varsayılan değer 0
     }
+
+    // --- Oyun Başlangıç Ayarları ---
+    public void InitializeGame()
+    {
+        // Başlangıç flag'lerini ayarla
+        SetFlag("conductor_talked", false);
+        SetFlag("conductor_key", false);
+        SetFlag("puzzle_solved", false);
+        SetFlag("game_completed", false);
+        
+        // Başlangıç ilişkilerini ayarla
+        characterRelationships.Clear();
+    }
+
+    
+    // --- SaveManager için Metotlar ---
+    public Dictionary<string, bool> GetAllFlags()
+    {
+        return new Dictionary<string, bool>(storyFlags);
+    }
+    
+    public Dictionary<string, int> GetAllRelationships()
+    {
+        return new Dictionary<string, int>(characterRelationships);
+    }
+    
+    // --- Debug Metotları ---
+    public void PrintAllFlags()
+    {
+        Debug.Log("=== STORY FLAGS ===");
+        foreach (var flag in storyFlags)
+        {
+            Debug.Log($"{flag.Key}: {flag.Value}");
+        }
+        
+        Debug.Log("=== CHARACTER RELATIONSHIPS ===");
+        foreach (var relationship in characterRelationships)
+        {
+            Debug.Log($"{relationship.Key}: {relationship.Value}");
+        }
+    }
 }

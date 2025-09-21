@@ -8,4 +8,8 @@ public class LocationNode
     public Sprite backgroundImage; // Ekranda gösterilecek arkaplan görseli
     public List<NavigationPath> navigationPaths; // Bu görselden gidilebilecek yollar
     public List<CharacterPlacement> charactersInNode; // Bu görselde bulunan karakterler
+    
+    // Döngüsel referansları önlemek için destinationNode'u string ID olarak tut
+    [System.NonSerialized]
+    public LocationNode destinationNode;
 }

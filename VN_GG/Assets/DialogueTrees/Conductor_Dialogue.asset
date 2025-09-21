@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49dd0bc37c190ba459a712d70abef88b, type: 3}
+  m_Name: Conductor_Dialogue
+  m_EditorClassIdentifier: 
+  startingNode:
+    nodeID: conductor_greeting
+    speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+    dialogueText: "Merhaba! Biletinizi görebilir miyim? Bu vagonun sonuna gitmek istiyorsunuz galiba..."
+    emotion: normal
+    choices:
+    - choiceText: "Evet, makinist odasına gitmem gerekiyor."
+      destinationNode:
+        nodeID: conductor_response_1
+        speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+        dialogueText: "Ah, anlıyorum. O zaman bu anahtarı alın. Ama dikkatli olun, vagonlar arasında gezinmek tehlikeli olabilir."
+        emotion: helpful
+        choices: []
+      actions:
+      - actionType: 0
+        parameter1: conductor_talked
+        boolValue: 1
+        intValue: 0
+      - actionType: 0
+        parameter1: conductor_key
+        boolValue: 1
+        intValue: 0
+    - choiceText: "Sadece geziyorum."
+      destinationNode:
+        nodeID: conductor_response_2
+        speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+        dialogueText: "Hmm, peki. Ama yine de bu anahtarı alın, belki ihtiyacınız olur."
+        emotion: suspicious
+        choices: []
+      actions:
+      - actionType: 0
+        parameter1: conductor_talked
+        boolValue: 1
+        intValue: 0
+      - actionType: 0
+        parameter1: conductor_key
+        boolValue: 1
+        intValue: 0
+  allNodes:
+  - nodeID: conductor_greeting
+    speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+    dialogueText: "Merhaba! Biletinizi görebilir miyim? Bu vagonun sonuna gitmek istiyorsunuz galiba..."
+    emotion: normal
+    choices:
+    - choiceText: "Evet, makinist odasına gitmem gerekiyor."
+      destinationNode:
+        nodeID: conductor_response_1
+        speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+        dialogueText: "Ah, anlıyorum. O zaman bu anahtarı alın. Ama dikkatli olun, vagonlar arasında gezinmek tehlikeli olabilir."
+        emotion: helpful
+        choices: []
+      actions:
+      - actionType: 0
+        parameter1: conductor_talked
+        boolValue: 1
+        intValue: 0
+      - actionType: 0
+        parameter1: conductor_key
+        boolValue: 1
+        intValue: 0
+    - choiceText: "Sadece geziyorum."
+      destinationNode:
+        nodeID: conductor_response_2
+        speaker: {fileID: 11400000, guid: b134ff3f6c3eddb44b7bc0747e5cf932, type: 2}
+        dialogueText: "Hmm, peki. Ama yine de bu anahtarı alın, belki ihtiyacınız olur."
+        emotion: suspicious
+        choices: []
+      actions:
+      - actionType: 0
+        parameter1: conductor_talked
+        boolValue: 1
+        intValue: 0
+      - actionType: 0
+        parameter1: conductor_key
+        boolValue: 1
+        intValue: 0
