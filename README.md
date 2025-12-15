@@ -1,2 +1,2 @@
 # VisualNovelPrototype
-it'a high stack visiual novel game. 
+it will be a high stack visiual novel game. 
